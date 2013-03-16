@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title data-i18n="options_title"></title>
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/options.css">
+
+    <script src="/vendor/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/javascripts/i18n.js"></script>
+
+    <script src="/javascripts/config.js"></script>
+    <script src="/javascripts/options.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <div class="brand">
+                    <img src="/images/icons/truemod_20.png" alt="Truemod" class="pull-left">
+                    <span data-i18n="options_headline"></span>
+                </div>
+                <ul class="nav">
+                    <li><a href="#settings" data-i18n="options_nav_settings"></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <article id="settings">
+            <form class="span6 well">
+                <fieldset>
+                    <legend data-i18n="settings_clipboard_section" class="muted"></legend>
+                    <div class="control-group">
+                        <label for="clipboard_enabled" class="checkbox">
+                            <input type="checkbox" id="clipboard_enabled">
+                            <span data-i18n="clipboard_enabled"></span>
+                        </label>
+                    </div>
+
+                    <div class="control-group offset1">
+                        <label for="clipboard_copy_short" class="radio">
+                            <input type="radio" name="clipboard_copy_url" id="clipboard_copy_short" value="#clipboard_copy_short">
+                            <span data-i18n="clipboard_copy_short"></span>
+                        </label>
+                        <label for="clipboard_copy_full" class="radio">
+                            <input type="radio" name="clipboard_copy_url" id="clipboard_copy_full" value="#clipboard_copy_full">
+                            <span data-i18n="clipboard_copy_full"></span>
+                        </label>
+                    </div>
+                </fieldset>
+            </form>
+        </article>
+    </div>
+</body>
+</html>

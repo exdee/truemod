@@ -1,0 +1,87 @@
+.ttg_button {
+  cursor: pointer;
+}
+
+.ttg_viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+
+  background-color: rgba(0,0,0,.7);
+  z-index: 9999;
+  padding-bottom: 60px;
+}
+
+.ttg_controls {
+  height: 40px;
+  text-align: center;
+}
+
+.ttg_controls_close {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  background-image: url(chrome-extension://__MSG_@@extension_id__/images/truegallery/close.png);
+  background-repeat: no-repeat;
+  background-position: 20px 10px;
+  border-bottom-left-radius: 60px;
+  background-color: rgba(0,0,0,.4);
+  opacity: .4;
+}
+
+.ttg_controls_close:hover {
+  opacity: 1;
+}
+
+.ttg_controls_next, .ttg_controls_previous {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  opacity: .4;
+}
+
+.ttg_controls_next:hover, .ttg_controls_previous:hover {
+  opacity: 1;
+}
+
+.ttg_controls_next {
+  margin-left: 50px;
+  background-image: url(chrome-extension://__MSG_@@extension_id__/images/truegallery/next.png);
+}
+
+.ttg_controls_previous {
+  margin-right: 50px;
+  background-image: url(chrome-extension://__MSG_@@extension_id__/images/truegallery/previous.png);
+}
+
+
+
+.ttg_image_container {
+  text-align: center;
+  -webkit-box-flex: 2;
+}
+
+.ttg_image_container img {
+  cursor: -webkit-zoom-out;
+  -webkit-box-shadow: 0 0 8px 4px #222;
+}
+
+.ttg_image_container img.ttg_img_normal {
+  max-height: 100%;
+  max-width: 100%;
+  cursor: -webkit-zoom-in;
+}
+
+.ttg_image_container.ttg_fullsized {
+  overflow: auto;
+}

@@ -1,0 +1,28 @@
+{
+  "extension_name": {"message": "Truemod"},
+  "extension_description": {"message": "Adds some functionality for talkers.ru, trueimages.ru"},
+
+  "truegallery_button_title": {"message": "View images with Truegallery"},
+  "trueshot_title" : { "message" : "Trueshot" },
+  "trueshot_headline" : { "message" : "Trueshot" },
+  "trueshot_empty_clipboard" : { "message" : "Clipboard does not contain images." },
+
+  "send_json_response_error" : { "message" : "Trueimages server responded with error." },
+  "send_xhr_status_error" : { "message" : "Trueimages is not available." },
+  "send_upload_error" : { "message" : "Somehow image was not uploaded." },
+  "send_error" : { "message" : "Upload error" },
+  "send_complete" : { "message" : "Upload complete" },
+
+  "options_title" : { "message" : "Truemod settings" },
+  "options_headline" : { "message" : "Truemod" },
+  "options_nav_settings" : { "message" : "Settings" },
+
+  "settings_clipboard_section" : { "message" : "Clipboard settings" },
+  "clipboard_copy_short" : { "message" : "Copy short url to timg.in" },
+  "clipboard_copy_full" : { "message" : "Copy fullsized image url" },
+  "clipboard_enabled" : { "message" : "Enable clipboard auto copy" },
+
+  "action_upload" : { "message" : "Upload" },
+  "action_crop" : { "message" : "Crop" },
+  "action_cancel" : { "message" : "Cancel" }
+}

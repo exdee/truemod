@@ -1,0 +1,23 @@
+body {
+    padding-top: 40px;
+}
+
+img {
+    max-width: none!important;
+}
+
+#screenshot {
+    padding: 10px;
+    background-color: rgba(230,230,230,.3);
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(100,100,100,.3);
+}
+
+#screenshot span:not(:only-child) {
+    display: none;
+}
+
+.jcrop-holder {
+    display: inline-block;
+    border: 1px solid #ddd;
+}

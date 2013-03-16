@@ -1,0 +1,29 @@
+{
+  "extension_name": { "message": "Truemod" },
+  "extension_description": { "message": "Добавляет новые функции для ресурсов talkers.ru, trueimages.ru" },
+
+  "truegallery_button_title": { "message": "Просмотр изображений в Truegallery" },
+
+  "trueshot_title" : { "message" : "Trueshot" },
+  "trueshot_headline" : { "message" : "Trueshot" },
+  "trueshot_empty_clipboard" : { "message" : "В буфере обмена изображений не обнаружено." },
+
+  "send_json_response_error" : { "message" : "Сервер Trueimages ответил всякой ерундой." },
+  "send_xhr_status_error" : { "message" : "Сервер Trueimages недоступен." },
+  "send_upload_error" : { "message" : "Каким-то образом изображение не было загружено." },
+  "send_error" : { "message" : "Ошибка отправки" },
+  "send_complete" : { "message" : "Отправка завершена" },
+
+  "options_title" : { "message" : "Настройки Truemod" },
+  "options_headline" : { "message" : "Truemod" },
+  "options_nav_settings" : { "message" : "Настройки" },
+
+  "settings_clipboard_section" : { "message" : "Настройки буфера обмена" },
+  "clipboard_copy_short" : { "message" : "Копировать короткую ссылку на timg.in" },
+  "clipboard_copy_full" : { "message" : "Копировать ссылку на полноразмерное изображение" },
+  "clipboard_enabled" : { "message" : "Включить автоматическое копирование ссылок в буфер обмена" },
+
+  "action_upload" : { "message" : "Загрузить" },
+  "action_crop" : { "message" : "Обрезать" },
+  "action_cancel" : { "message" : "Отмена" }
+}
