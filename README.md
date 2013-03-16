@@ -6,3 +6,9 @@ This is a chrome extension that allows you to upload screenshots to [Trueimages]
 Extension adds a button to chrome which opens page for pre-upload manipulations with image (crop only) and upload. *Actually it will try to grab any image data from your clipboard. It can be a screenshot (after push PrntScrn) or any image or it's part that you put to your clipboard.*
 #### talkers.ru gallery
 Extension will also add a button to every post on [Talkers.ru](http://talkers.ru) forum that contains thumb-preview image links from [Trueimages](http://trueimages.ru) to watch all fullsized images in a fancy gallery.
+
+## installation
+Extension could be installed from [chrome webstore url](https://chrome.google.com/webstore/detail/truemod/dofbadkaimejhddcmohhfofmnoflihgh/details).
+
+## license
+All this project is licensed under [MIT license](http://opensource.org/licenses/MIT).
