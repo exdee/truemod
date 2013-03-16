@@ -11,4 +11,4 @@ Extension will also add a button to every post on [Talkers.ru](http://talkers.ru
 Extension could be installed from [chrome webstore url](https://chrome.google.com/webstore/detail/truemod/dofbadkaimejhddcmohhfofmnoflihgh/details).
 
 ## license
-All this project is licensed under [MIT license](http://opensource.org/licenses/MIT).
+All this project is licensed under [MIT license](https://github.com/exdee/truemod/blob/master/LICENSE.md).
