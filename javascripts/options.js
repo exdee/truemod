@@ -2,19 +2,19 @@ jQuery(function () {
     'use strict';
     $(document).i18n();
 
-    config.default("options_page", $("ul.nav a:first").attr("href"));
+    config.default("options_page", $("#nav a:first").attr("href"));
 
     var show = function (hash) {
         var selector = hash || location.hash || config.get("options_page");
         $("article:not("+ selector +")").addClass("hide");
         $("article" + selector).removeClass("hide");
-        $("a:not([href=" + selector + "])").parent().removeClass("active");
-        $("a[href=" + selector + "]").parent().addClass("active");
+        $("#nav a:not([href=" + selector + "])").parent().removeClass("active");
+        $("#nav a[href=" + selector + "]").parent().addClass("active");
     }
 
     show();
 
-    $("ul.nav a").on("click", function (e) {
+    $("#nav a").on("click", function (e) {
         config.set("options_page", this.hash);
         show(this.hash);
     });
