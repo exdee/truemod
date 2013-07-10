@@ -14,14 +14,21 @@
   "send_error" : { "message" : "Ошибка отправки" },
   "send_complete" : { "message" : "Отправка завершена" },
 
-  "options_title" : { "message" : "Настройки Truemod" },
-  "options_headline" : { "message" : "Truemod" },
-  "options_nav_settings" : { "message" : "Настройки" },
+  "truemod_headline" : { "message" : "Truemod" },
+
+  "nav_trueshot" : { "message" : "Trueshot" },
+  "nav_settings" : { "message" : "Настройки" },
+  "nav_history" : { "message" : "История" },
+
+  "log_link" : { "message" : "Ссылка" },
+  "log_created_at" : { "message" : "Дата" },
 
   "settings_clipboard_section" : { "message" : "Настройки буфера обмена" },
   "clipboard_copy_short" : { "message" : "Копировать короткую ссылку на timg.in" },
   "clipboard_copy_full" : { "message" : "Копировать ссылку на полноразмерное изображение" },
   "clipboard_enabled" : { "message" : "Включить автоматическое копирование ссылок в буфер обмена" },
+
+  "trueshift_action" : { "message" : "Отправить на Trueimages" },
 
   "action_upload" : { "message" : "Загрузить" },
   "action_crop" : { "message" : "Обрезать" },

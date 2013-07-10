@@ -4,12 +4,16 @@ var Background = (function () {
     Background.prototype.trueimages_url = "http://trueimages.ru/";
     Background.prototype.trueimages_short_url = "http://timg.in/";
     Background.prototype.trueimages_upload_path = "upload.php?json=true";
-    Background.prototype.trueshot_page = "pages/trueshot.html";
+    Background.prototype.trueshot_page = "pages/truemod.html#trueshot";
 
     config.default("clipboard_enabled", true);
     config.default("clipboard_copy_url", "#clipboard_copy_short");
 
-    Background.prototype.send = function(data, type, callback) {
+    Background.prototype.trueshift_action_listener = function(image, tab) {
+        this.send(image.srcUrl, "url");
+    };
+
+    Background.prototype.send = function(data, type) {
         var
             fd = new FormData(),
             xhr = new XMLHttpRequest();
@@ -44,6 +48,7 @@ var Background = (function () {
             if (config.get("clipboard_enabled")) {
                 this.copy_image_url(image);
             };
+            log.create({image: image, created_at: (new Date()*1)});
         } else {
             notification.error(error);
         }
@@ -71,6 +76,12 @@ var Background = (function () {
         chrome.browserAction.onClicked.addListener(function(tab) {
             chrome.tabs.create({'url': chrome.extension.getURL(this.trueshot_page)});
         }.bind(this));
+
+        chrome.contextMenus.create({
+            "title" : chrome.i18n.getMessage("trueshift_action"),
+            "contexts" : [ "image" ],
+            "onclick" : this.trueshift_action_listener.bind(this)
+        });
     };
 
     return Background;

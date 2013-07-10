@@ -1,3 +1,7 @@
-body {
-    padding-top: 70px;
+img.thumb {
+    max-height: 64px;
+}
+
+table input[type=checkbox] {
+    float: right;
 }

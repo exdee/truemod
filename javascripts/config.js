@@ -1,4 +1,4 @@
-var config, Config = (function(){
+var Config = (function(){
   function Config () {
     
   }
@@ -26,5 +26,4 @@ var config, Config = (function(){
   };
 
   return Config;
-})();
-config = new Config();
+}()), config = new Config();
