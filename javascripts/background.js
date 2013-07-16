@@ -8,6 +8,7 @@ var Background = (function () {
 
     config.default("clipboard_enabled", true);
     config.default("clipboard_copy_url", "#clipboard_copy_short");
+    config.default("log_items_per_page", 20);
 
     Background.prototype.trueshift_action_listener = function(image, tab) {
         this.send(image.srcUrl, "url");

@@ -11,52 +11,52 @@ jQuery(function () {
         config.set("clipboard_copy_url", $("[name=clipboard_copy_url]:checked").val());
     });
 
-    var page = 1;
+    var page = 0;
     var display_log = function () {
-        var container = $("#log_table tbody");
+        var container = $("#log_table tbody"), i = 0;
         container.empty();
         chrome.extension.getBackgroundPage().log.each(function (item) {
-            var row = $("<tr>");
-            $("<td>").append(
-                $("<a>").attr("href",
-                    chrome.extension.getBackgroundPage().background.trueimages_short_url +
-                    item.value.image.shorturl
-                ).attr("target", "_blank").append(
-                    $("<img>").attr("src",
-                        chrome.extension.getBackgroundPage().background.trueimages_url +
-                        item.value.image.thumb
-                    ).addClass("thumb")
-                )
-            ).appendTo(row);
-            var created_at = new Date(item.value.created_at);
-            $("<td>").append(
-                created_at.toLocaleDateString(chrome.i18n.getMessage("@@ui_locale")) + " " +
-                created_at.toLocaleTimeString(chrome.i18n.getMessage("@@ui_locale"))
-            ).appendTo(row);
-            $("<td>").append(
-                $("<input>").attr("type", "checkbox").val(item.key)
-            ).appendTo(row);
-            row.appendTo(container);
-            
-        },  IDBKeyRange.bound(
-                (page-1)*config.get("log_items_per_page"), 
-                page*config.get("log_items_per_page"), 
-                true
-            )
-        );
+            if(
+                i < (page+1)*config.get("log_items_per_page") &&
+                i >= page*config.get("log_items_per_page")
+            ) {
+                var row = $("<tr>");
+                $("<td>").append(
+                    $("<a>").attr("href",
+                        chrome.extension.getBackgroundPage().background.trueimages_short_url +
+                        item.value.image.shorturl
+                    ).attr("target", "_blank").append(
+                        $("<img>").attr("src",
+                            chrome.extension.getBackgroundPage().background.trueimages_url +
+                            item.value.image.thumb
+                        ).addClass("thumb")
+                    )
+                ).appendTo(row);
+                var created_at = new Date(item.value.created_at);
+                $("<td>").append(
+                    created_at.toLocaleDateString(chrome.i18n.getMessage("@@ui_locale")) + " " +
+                    created_at.toLocaleTimeString(chrome.i18n.getMessage("@@ui_locale"))
+                ).appendTo(row);
+                $("<td>").append(
+                    $("<input>").attr("type", "checkbox").val(item.key)
+                ).appendTo(row);
+                row.appendTo(container);
+            }
+            i++;
+        });
     };
 
     display_log();
 
     chrome.extension.getBackgroundPage().log.count(function (count) {
-        for(var i = 1; i <= Math.ceil(count/config.get("log_items_per_page")); i++) {
+        for(var i = 0; i < Math.ceil(count/config.get("log_items_per_page")); i++) {
             var li = $("<li>");
-            var link = $("<a>").attr("href", "#").html(i);
+            var link = $("<a>").attr("href", "#").data("page",i).html(i+1);
             link.on("click", function (event) {
                 event.preventDefault();
                 $(".pagination li.active").removeClass("active");
                 $(this).parent().addClass("active");
-                page = parseInt($(this).html());
+                page = parseInt($(this).data("page"));
                 display_log();
             });
             if(page === i) li.addClass("active");
