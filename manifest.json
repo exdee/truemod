@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "__MSG_extension_name__",
     "description": "__MSG_extension_description__",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "default_locale" : "ru",
     "permissions": [
         "http://trueimages.ru/*",
